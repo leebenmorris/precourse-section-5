@@ -9,12 +9,12 @@
 </head>
 <body>
 
-  <form class='container'>
+  <form class='container text-center'>
     <h2>A simple Hangman game - enjoy!</h2>
     <h3>Player 1: Please enter a word (no spaces!) for Player 2 to guess</h3>
-    <h3>Please use the computer keyboard to do this</h3>
+    <h3>Please use the computer keyboard to do this, not the keyboard below!</h3>
     <div class="form-group">
-      <input class="form-control" type="text" id="p1Word">
+      <input autocomplete="off" class="form-control" type="text" id="p1Word">
     </div>
     <button id='p1Btn' class="btn btn-default">Submit</button>
   </form>
@@ -50,6 +50,9 @@
     <button type="button" id='btnB' class="btn btn-primary btn-lg">B</button>
     <button type="button" id='btnN' class="btn btn-primary btn-lg">N</button>
     <button type="button" id='btnM' class="btn btn-primary btn-lg">M</button>
+  </div>
+
+  <div class='container text-center' id='guessArea'>
   </div>
 
 
