@@ -15,6 +15,9 @@ $(document).ready(function(){
 
   //submit button click capture
   $('#submitBtn').click(function(){
+    
+    //capture the input phrase from the input field
+    phrase = $('#phrase').val().toUpperCase()
 
     //reset everything on the page when the submit button is clicked
     $('#phrase').focus()              //refocus on input box
@@ -26,9 +29,6 @@ $(document).ready(function(){
     $('#guessArea').empty()           //clear all previous elements from guessArea
     $('#keys button').off('click')    //remove click handlers from on screen keyboard
     $('#keys button').removeClass('disabled').on('click')  //reset keyboard and enable click handlers
-
-    //capture the input phrase from the input field
-    phrase = $('#phrase').val().toUpperCase()
 
     //put blanks in guessArea and record the number of spaces in the phrase
     spaceCount = prepGuessArea(phrase)
