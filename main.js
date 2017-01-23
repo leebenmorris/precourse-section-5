@@ -15,17 +15,17 @@ $(document).ready(function(){
 
   //submit button click capture
   $('#submitBtn').click(function(){
-    
-    //capture the input phrase from the input field
+
+    //capture the input phrase from the input field then blank it so player 2 cannot see entered phrase
     phrase = $('#phrase').val().toUpperCase()
+    $('#phrase').val('')
 
     //reset everything on the page when the submit button is clicked
     $('#phrase').focus()              //refocus on input box
     canvas.clearRect(0, 0, 200, 200)  //clear canvas area
     canvas.beginPath()                //clear path cache
     errorCount = 0
-    successCount = 0
-    $('#phrase').val('')              //blank the input box so player 2 cannot see entered phrase
+    successCount = 0    
     $('#guessArea').empty()           //clear all previous elements from guessArea
     $('#keys button').off('click')    //remove click handlers from on screen keyboard
     $('#keys button').removeClass('disabled').on('click')  //reset keyboard and enable click handlers
